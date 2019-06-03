@@ -1,30 +1,34 @@
 # woking.py
 
 import os
+from datetime import datetime
 
-path = "C:\\Users\\Venkata_Naga_Preethi\\Desktop\\All PY Practise\\File operations\\"
 
-text_files = []
+def get_current_timestamp():
+    date = datetime.now().strftime('%Y_%m_%d %H_%M_%S')
+    return str(date)
 
-for r, d, f in os.walk(path):
-    for file in f:
-        if '.txt' in file:
-            text_files.append(file)
 
-print(text_files)
+def copy_file_data():
+    end_of_file_string = input("Please enter the string you want to display at the end of each file: ")
+    path = input("Please enter the path: ")
 
-with open("Target_file.txt", "w") as target_file:
-    for new_file in text_files:
-        if new_file != "something.txt" and new_file != "Target_file.txt":
-            print(new_file)
-            target_file.write("Source: {} \n".format(new_file))
+    text_files = []
+
+    for root, directory, files in os.walk(path):
+        for file in files:
+            if '.txt' in file:
+                text_files.append(file)
+
+    target_file_name = "Target" + get_current_timestamp() + ".txt"
+
+    with open(target_file_name, "w") as target_file:
+        for new_file in text_files:
+            target_file.write("\nSource: {} \n".format(new_file))
             with open(new_file, "r") as f:
                 for line in f.readlines():
                     target_file.write(line)
-            with open("something.txt", "r") as file:
-                for line in file.readlines():
-                    target_file.write(line)
+            target_file.write(end_of_file_string)
 
-# with open("Target_file.txt", "r") as f:
-#     for line in f.readlines():
-#         print(line)
+
+copy_file_data()

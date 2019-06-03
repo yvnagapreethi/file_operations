@@ -1,3 +1,11 @@
+
+Source: something.txt 
+something1
+something1
+thing
+neeww
+hahaha
+************end********
 Source: temp.txt 
 temp 1
 temp 2
@@ -5,12 +13,10 @@ temp 3
 temp 4
 temp 5
 temp 6
-*****End of the File*****
-
+************end********
 Source: with_file.txt 
 Very first line
 Very second line
 Very third line
 Very fourth line
-*****End of the File*****
-
+************end********
