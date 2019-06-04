@@ -9,9 +9,7 @@ def get_current_timestamp():
     return str(date)
 
 
-def copy_file_data():
-    end_of_file_string = input("Please enter the string you want to display at the end of each file: ")
-    path = input("Please enter the path: ")
+def copy_file_data(end_of_file_string, path):
 
     text_files = []
 
@@ -31,4 +29,7 @@ def copy_file_data():
             target_file.write(end_of_file_string)
 
 
-copy_file_data()
+if __name__ == "__main__":
+    end_of_file_string = input("Please enter the string you want to display at the end of each file: ")
+    path = input("Please enter the path: ")
+    copy_file_data(end_of_file_string, path)

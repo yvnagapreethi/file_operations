@@ -1,0 +1,45 @@
+
+Source: something.txt 
+something1
+something1
+thing
+neeww
+hahaha
+====================THE END===================
+Source: Target2019_06_03 13_38_50.txt 
+
+Source: something.txt 
+something1
+something1
+thing
+neeww
+hahaha
+************end********
+Source: temp.txt 
+temp 1
+temp 2
+temp 3
+temp 4
+temp 5
+temp 6
+************end********
+Source: with_file.txt 
+Very first line
+Very second line
+Very third line
+Very fourth line
+************end********====================THE END===================
+Source: temp.txt 
+temp 1
+temp 2
+temp 3
+temp 4
+temp 5
+temp 6
+====================THE END===================
+Source: with_file.txt 
+Very first line
+Very second line
+Very third line
+Very fourth line
+====================THE END===================
